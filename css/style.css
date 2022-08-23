@@ -21,16 +21,9 @@ body {
     color: #555;
 }
 
-.profilo-container {
-    padding-top: 100px;
-    margin: auto;
-    margin-left: 5%;
-    margin-right: 5%;
 
 
-    align-content: center;
 
-}
 
 h1,
 h2,
@@ -44,6 +37,7 @@ h6 {
 p {
     margin-bottom: 24px;
     line-height: 1.9;
+    color: #00011c;
 }
 
 label {
@@ -413,7 +407,7 @@ input[type="radio"]:hover {
 .form-check-label {
     font-size: 16px;
     font-weight: 400;
-    color: #555;
+    color: #00011c;
 }
 
 .form-select {
@@ -454,4 +448,14 @@ input[type="radio"]:hover {
 .nav {
     --bs-nav-link-color: #82000a;
     --bs-nav-link-hover-color: #82000a;
+}
+
+/* CSS PROFILO.html */
+.profilo-container {
+    padding-top: 100px;
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-content: center;
+
 }

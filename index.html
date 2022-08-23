@@ -22,7 +22,7 @@
 
 <body>
     <div class="profilo-container">
-        <div class="border p-1 rounded-2 bg-white">
+        <div class="border p-3 rounded-2 bg-white">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <button class="nav-link active" id="nav-account-tab" data-bs-toggle="tab"
@@ -42,74 +42,442 @@
                             class="bi bi-gear"></i> Impostazioni</button>
                 </div>
             </nav>
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-account" role="tabpanel" aria-labelledby="nav-account">
-                    <br>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-10 col-sm-12">
-                            <div class="row g-2">
-                                <form action="" id="formaccount">
+            <form action="">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-account" role="tabpanel"
+                        aria-labelledby="nav-account">
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-10 col-sm-12">
+                                <div class="row g-2">
                                     <div class="form-group">
-                                        <div class="form-group">
-                                            <label for="nomefield">Nome</label>
-                                            <input type="text" class="form-control" id="nomefield" value="Mario"
-                                                onchange="changed()">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="cognomefield">Cognome</label>
-                                            <input type="text" class="form-control" id="cognomefield" value="Rossi"
-                                                onchange="changed()">
-                                        </div>
-                                        <label for="emailfield">Email</label>
-                                        <input type="email" class="form-control" id="emailfield" value="test@test.com"
-                                            onchange="changed()">
+                                        <label for="nome-field">Nome</label>
+                                        <input type="text" class="form-control" id="nome-field" value="Mario"
+                                            onchange="changed(1)">
                                     </div>
                                     <div class="form-group">
-                                        <label for="telefonofield">Telefono</label>
-                                        <input type="text" class="form-control" id="telefonofield" value="+393333333333"
-                                            onchange="changed()">
+                                        <label for="cognome-field">Cognome</label>
+                                        <input type="text" class="form-control" id="cognome-field" value="Rossi"
+                                            onchange="changed(1)">
                                     </div>
                                     <div class="form-group">
-                                        <label for="passwordfield">Password</label>
-                                        <input type="text" class="form-control" id="passwordfield" value="********"
-                                            onchange="changed()">
+                                        <label for="email-field">Email</label>
+                                        <input type="email" class="form-control" id="email-field" value="test@test.com"
+                                            onchange="changed(1)">
                                     </div>
-                                </form>
+                                    <div class="form-group">
+                                        <label for="telefono-field">Telefono</label>
+                                        <input type="text" class="form-control" id="telefono-field"
+                                            value="+393333333333" onchange="changed(1)">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="password-field">Password</label>
+                                        <input type="text" class="form-control" id="password-field" value="********"
+                                            onchange="changed(1)">
+                                    </div>
+                                </div>
                             </div>
-
+                            <div class="col-auto">
+                                <br>
+                                <label for="note">Note Aggiuntive</label>
+                                <h6 id="note">Data registrazione: 22/08/2022 09:19 <br>
+                                    Data fruizione servizio: 22/08/2022 07:28</h6>
+                                <br>
+                                <button type="button" class="btn btn-success" id="salvabtn1" disabled>Salva
+                                    modifiche</button>
+                            </div>
                         </div>
-                        <div class="col-auto">
-                            <br>
-                            <label for="note">Note Aggiuntive</label>
-                            <h6 id="note">Data registrazione: 22/08/2022 09:19 <br>
-
-                                Data fruizione servizio: 22/08/2022 07:28</h6>
-
-                            <br>
-
-                            <button type="button" class="btn btn-success" id="salvabtn" disabled>Salva
-                                modifiche</button>
+                    </div>
+                    <div class="tab-pane fade" id="nav-anagrafica" role="tabpanel" aria-labelledby="nav-anagrafica-tab">
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="row g-2">
+                                    <h6 class="fw-bold">Anagrafica:</h6>
+                                    <div class="form-group">
+                                        <label for="cf-field">Codice Fiscale</label>
+                                        <input type="text" class="form-control" id="cf-field" value="PDNMRC98H18A703I"
+                                            onchange="changed(2)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="data-field">Data di nascita</label>
+                                        <input type="date" class="form-control" id="data-field" value="1990-01-01"
+                                            onchange="changed(2)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="luogo-field">Luogo di nascita</label>
+                                        <input type="text" class="form-control" id="luogo-field"
+                                            value="Bassano del Grappa" onchange="changed(2)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="naz-field">Nazione di nascita</label>
+                                        <input type="text" class="form-control" id="naz-field" value="Italia"
+                                            onchange="changed(2)">
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="row g-2">
+                                    <h6 class="fw-bold">Residenza:</h6>
+                                    <div class="form-group">
+                                        <label for="indiriz-field">Indirizzo</label>
+                                        <input type="text" class="form-control" id="indiriz-field" value="Via Monti"
+                                            onchange="changed(2)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="numc-field">Numero civico</label>
+                                        <input type="text" class="form-control" id="numc-field" value="3"
+                                            onchange="changed(2)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="com-field">Comune</label>
+                                        <input type="text" class="form-control" id="com-field"
+                                            value="Bassano del Grappa" onchange="changed(2)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cap-field">CAP</label>
+                                        <input type="text" class="form-control" id="cap-field" value="36061"
+                                            onchange="changed(2)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="prov-field">Provincia</label>
+                                        <input type="text" class="form-control" id="prov-field" value="VI"
+                                            onchange="changed(2)">
+                                    </div>
+                                    <button type="button" class="btn btn-success" id="salvabtn2" disabled>Salva
+                                        modifiche</button>
+                                </div>
+                            </div>
                         </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-pref" role="tabpanel" aria-labelledby="nav-pref-tab">
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="row g-2">
+                                    <h6 style="font-weight: bold ;">Categoria richiesta: <span
+                                            style="font-weight: 400;">Affitto Stabile <button type="button"
+                                                data-bs-toggle="modal" data-bs-target="#cambioModal"
+                                                style="border: 0; background-color:white;"><i
+                                                    class="bi bi-question-circle"></i></button></span></h6>
+                                    <h6 style="font-weight: bold ;">Comuni di ricerca: <span><span
+                                                style="font-weight: 400;" id="comuni">
+                                            </span><button type="button" data-bs-toggle="modal"
+                                                data-bs-target="#comuniModal"
+                                                style="border: 0; background-color:white;"><i
+                                                    class="bi bi-gear"></i></button></span></h6>
+                                    <h6 style="font-weight: bold ;">Tipologia immobile: <span><span
+                                                style="font-weight: 400;" id="tipologia">
+                                            </span><button type="button" data-bs-toggle="modal"
+                                                data-bs-target="#tipologiaModal"
+                                                style="border: 0; background-color:white;"><i
+                                                    class="bi bi-gear"></i></button></span></h6>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault"><label class="form-check-label"
+                                            for="flexCheckDefault">
+                                            Arredato
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="budget-field">Budget: </label>
+                                        <input type="text" class="form-control" id="budget-field" value="500,00€"
+                                            onchange="changed(3)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mese"> Entro il mese di: </label>
+                                        <select class="form-select" aria-label="Entro il mese di:" id="mese"
+                                            onchange="changed(3)">
+                                            <option selected disabled>Seleziona</option>
+                                            <option value="1">Gennaio</option>
+                                            <option value="2">Febbraio</option>
+                                            <option value="3">Marzo</option>
+                                            <option value="4">Aprile</option>
+                                            <option value="5">Maggio</option>
+                                            <option value="6">Giugno</option>
+                                            <option value="7">Luglio</option>
+                                            <option value="8">Agosto</option>
+                                            <option value="9">Settembre</option>
+                                            <option value="10">Ottobre</option>
+                                            <option value="11">Novembre</option>
+                                            <option value="12">Dicembre</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Permanenza">Permanenza di mesi: </label>
+                                        <select class="form-select" id="Permanenza" onchange="changed(3)">
+                                            <option selected disabled>Seleziona</option>
+                                            <option value="1">Fino ad 1 mese</option>
+                                            <option value="2">Fino a 3 mesi</option>
+                                            <option value="3">Fino a 6 mesi</option>
+                                            <option value="4">Fino a 9 mesi</option>
+                                            <option value="5">Fino a 12 mesi</option>
+                                            <option value="6">Più di 12 mesi</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="npersone">Numero di persone: </label>
+                                        <select class="form-select" id="npersone" onchange="changed(3)">
+                                            <option selected disabled>Seleziona</option>
+                                            <option value="1">1 persona</option>
+                                            <option value="2">coppia o 2 persone</option>
+                                            <option value="3">3 persone</option>
+                                            <option value="4">4 persone</option>
+                                            <option value="5">coppia + figlio</option>
+                                            <option value="6">6 persone</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="row g-2">
+                                    <h6 style="font-weight: bold ;">Altre preferenze: <span><span
+                                                style="font-weight: 400;" id="altre">
+                                            </span><button type="button" data-bs-toggle="modal"
+                                                data-bs-target="#altreModal"
+                                                style="border: 0; background-color:white;"><i
+                                                    class="bi bi-gear"></i></button></span></h6>
+                                    <div class="form-group">
+                                        <label for="poslav">Posizione lavorativa: </label>
+                                        <select class="form-select" id="poslav" onchange="changed(3)">
+                                            <option selected disabled>Selezione</option>
+                                            <option value="1">Lavoro</option>
+                                            <option value="2">Studio</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fonte">Fonte di reddito: </label>
+                                        <input type="text" class="form-control" id="fonte" onchange="changed(3)"
+                                            value="Reddito proprio">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inqad">Inquadramento lavorativo: </label>
+                                        <input type="text" class="form-control" id="inquad" onchange="changed(3)"
+                                            value="dipendente">
+                                    </div>
+
+
+
+
+
+                                    <button type="button" class="btn btn-success" id="salvabtn3" disabled>Salva
+                                        modifiche</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-servizio" role="tabpanel" aria-labelledby="nav-servizio-tab">
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-10 col-sm-12">
+                                <div class="row g-2">
+                                    <div class="form-group">
+                                        <label for="nome-field">Nome</label>
+                                        <input type="text" class="form-control" id="nome-field" value="Mario"
+                                            onchange="changed(4)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cognome-field">Cognome</label>
+                                        <input type="text" class="form-control" id="cognome-field" value="Rossi"
+                                            onchange="changed(4)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email-field">Email</label>
+                                        <input type="email" class="form-control" id="email-field" value="test@test.com"
+                                            onchange="changed(4)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telefono-field">Telefono</label>
+                                        <input type="text" class="form-control" id="telefono-field"
+                                            value="+393333333333" onchange="changed(4)">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="password-field">Password</label>
+                                        <input type="text" class="form-control" id="password-field" value="********"
+                                            onchange="changed(4)">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <br>
+                                <label for="note">Note Aggiuntive</label>
+                                <h6 id="note">Data registrazione: 22/08/2022 09:19 <br>
+                                    Data fruizione servizio: 22/08/2022 07:28</h6>
+                                <br>
+                                <button type="button" class="btn btn-success" id="salvabtn4" disabled>Salva
+                                    modifiche</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-impost" role="tabpanel" aria-labelledby="nav-impost-tab">...
                     </div>
 
 
+
+
+
+
                 </div>
-                <div class="tab-pane fade" id="nav-anagrafica" role="tabpanel" aria-labelledby="nav-anagrafica-tab">...
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="cambioModal" tabindex="-1" aria-labelledby="cambioModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cambioModalLabel">Tipologia di Immobile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="tab-pane fade" id="nav-pref" role="tabpanel" aria-labelledby="nav-pref-tab">...</div>
-                <div class="tab-pane fade" id="nav-servizio" role="tabpanel" aria-labelledby="nav-servizio-tab">...
+                <div class="modal-body">
+                    <h6>La tipologia scelta determina quale annuncio è possibile sbloccare, nel caso fosse stato
+                        acquistato il pacchetto errato cliccare <a href="">qui</a>
+                        <!-- Il link manda a noi una mail di richiesta per il cambio tipologia-->
+                    </h6>
                 </div>
-                <div class="tab-pane fade" id="nav-impost" role="tabpanel" aria-labelledby="nav-impost-tab">...</div>
             </div>
         </div>
+    </div>
+    <div class="modal fade" id="comuniModal" tabindex="-1" aria-labelledby="comuniModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="comuniModalLabel">Selezione Comuni</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="chkcomuni1">
+                                <label class="form-check-label" for="chkcomuni1">
+                                    Borso del Grappa (TV)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="chkcomuni2">
+                                <label class="form-check-label" for="chkcomuni2">
+                                    Castelfranco Veneto (TV)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="chkcomuni3">
+                                <label class="form-check-label" for="chkcomuni3">
+                                    Pieve del Grappa (TV)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="chkcomuni4">
+                                <label class="form-check-label" for="chkcomuni4">
+                                    San Zenone degli Ezzelini (TV)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="chkcomuni5">
+                                <label class="form-check-label" for="chkcomuni5">
+                                    Venezia (VE)
+                                </label>
+                            </div>
+                        </div>
 
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="chkcomuni6"><label
+                                    class="form-check-label" for="chkcomuni6">
+                                    Bassano del Grappa (VI)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="chkcomuni7"><label
+                                    class="form-check-label" for="chkcomuni7">
+                                    Cassola (VI)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="chkcomuni8"><label
+                                    class="form-check-label" for="chkcomuni8">
+                                    Colceresa (VI)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="chkcomuni9"><label
+                                    class="form-check-label" for="chkcomuni9">
+                                    Marostica (VI)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="changed(3)">Salva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tipologiaModal" tabindex="-1" aria-labelledby="tipologiaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tipologiaModalLabel">Selezione tipologia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    stesso discorso dei comuni
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="changed(3)">Salva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="altreModal" tabindex="-1" aria-labelledby="altreModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="altreModalLabel">Selezione altre preferenze</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    stesso discorso dei comuni
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="changed(3)">Salva</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
     <script src="js/script.js"></script>
-
 </body>
-
 
 </html>

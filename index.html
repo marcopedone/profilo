@@ -276,55 +276,116 @@
                         <br>
                         <div class="row">
                             <div class="col-lg-6 col-md-10 col-sm-12">
-                                <div class="row g-2">
-                                    <div class="form-group">
-                                        <label for="nome-field">Nome</label>
-                                        <input type="text" class="form-control" id="nome-field" value="Mario"
-                                            onchange="changed(4)">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="cognome-field">Cognome</label>
-                                        <input type="text" class="form-control" id="cognome-field" value="Rossi"
-                                            onchange="changed(4)">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email-field">Email</label>
-                                        <input type="email" class="form-control" id="email-field" value="test@test.com"
-                                            onchange="changed(4)">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="telefono-field">Telefono</label>
-                                        <input type="text" class="form-control" id="telefono-field"
-                                            value="+393333333333" onchange="changed(4)">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="password-field">Password</label>
-                                        <input type="text" class="form-control" id="password-field" value="********"
-                                            onchange="changed(4)">
-                                    </div>
-                                </div>
+                                <p>Pacchetto attivo:</p>
                             </div>
                             <div class="col-auto">
                                 <br>
-                                <label for="note">Note Aggiuntive</label>
-                                <h6 id="note">Data registrazione: 22/08/2022 09:19 <br>
-                                    Data fruizione servizio: 22/08/2022 07:28</h6>
-                                <br>
-                                <button type="button" class="btn btn-success" id="salvabtn4" disabled>Salva
-                                    modifiche</button>
+                                <div class="card"
+                                    style="width: 25rem;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                                    <div class="card-body p-0">
+                                        <div class="card-title bg-light text-center p-3"
+                                            style="border-top-left-radius:5px ;border-top-right-radius:5px;">
+                                            <h6>Pacchetto:</h6>
+                                            <h3><span class="fw-bold text-center text-danger
+                                            ">#CERCO AFFITTO</span></h3>
+
+                                        </div>
+                                        <div class="card-text bg-white p-3">
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="progress-label-container">
+                                                        <div class="progress" style="height: 20px;">
+                                                            <div class="progress-bar bg-success" role="progressbar"
+                                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="100"
+                                                                id="progressbar" style="height: 30px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="progress-label ">
+                                                            <h6 id="prog_label" class="fw-bold "></h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress-under-label">
+                                                        <div class="start text-center">
+                                                            <h5>Acquisto</h5>
+                                                            <h6 class="border rounded p-1" id="data1">15/08/2022</h6>
+                                                        </div>
+                                                        <div class="end text-center">
+                                                            <h5>Scadenza</h5>
+                                                            <h6 class="border rounded p-1" id="data2">15/10/2022</h6>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h5>Status: <span class="fw-bold text-success" id="status">Attivo</span>
+                                            </h5>
+                                            <h6>Some quick example text to build on the card title and make
+                                                up the bulk of the card's content.</h6>
+                                            </p>
+
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="flush-headingOne">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                                            aria-controls="flush-collapseOne">
+                                                            Resoconto pacchetto
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                        aria-labelledby="flush-headingOne"
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body">
+                                                            <div class="row g-2 text-center">
+                                                                <h6 class="text-danger fw-bold">Visita fino a 10
+                                                                    immobili in
+                                                                    60 gg</h6>
+                                                                <h6 class="fw-bold">Pack per la ricerca di affitto
+                                                                    transitorio per chi dispone di un
+                                                                    contratto lavorativo a termine</h6>
+                                                                <h6>Visita direttamente con i proprietari</h6>
+                                                                <h6>Quando vuoi e in piena autonomia</h6>
+                                                                <h6>Scegli la tua permanenza</h6>
+                                                                <h6>Risparmia la mensilità di provvigione</h6>
+                                                                <h6 class="fw-bold">Interrompi la ricerca entro 14 gg
+                                                                    dall’acquisto e non versi il saldo</h6>
+                                                                <h6>Paga con PayPal - carta di credito - bonifico
+                                                                    bancario
+                                                                </h6>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+
+
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            <p>aaaa</p>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-success" id="salvabtn4"
+                                        style="border-top-left-radius:0 ;border-top-right-radius:0" disabled>Salva
+                                        modifiche</button>
+
+
+                                </div>
                             </div>
                         </div>
+                        <div class="tab-pane fade" id="nav-impost" role="tabpanel" aria-labelledby="nav-impost-tab">...
+                        </div>
+
+
+
+
+
+
                     </div>
-                    <div class="tab-pane fade" id="nav-impost" role="tabpanel" aria-labelledby="nav-impost-tab">...
-                    </div>
-
-
-
-
-
-
-                </div>
             </form>
         </div>
     </div>
